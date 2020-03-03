@@ -1,0 +1,6 @@
+create table billmaster(billno int primary key,custname varchar(20),billdate date);
+ insert into billmaster values(1,'aaa','07/03/2017');
+insert into billmaster values(2,'bbb','07/03/2017');
+create table billdetails(itemname varchar(20),qty int,rate int,billno int references billmaster(billno));
+insert into billdetails values('pd','2','500',1);
+insert into billdetails values('mouse','4','1500',1);
